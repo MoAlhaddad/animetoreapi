@@ -4,6 +4,8 @@ import "../App.css";
 import { Link } from 'react-router-dom';
 import "./Navbar.scss";
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements';
+import {SearchBar} from "./Searchbar";
+import {Search} from "./Search";
 
 
 const Navbar = () => {
@@ -34,13 +36,17 @@ const Navbar = () => {
         <Bars />
   
         <NavMenu>
+          {/* <SearchBar /> */}
           <NavLink to='/' activeStyle>
                 Home
           </NavLink>
           <NavLink to='/animes' activeStyle>
             Animes
           </NavLink>
-          <NavLink to='/hits' activeStyle>
+          <NavLink to='/search' activeStyle>
+          Search
+          </NavLink>
+          <NavLink to='/hits' >
             New Hits
           </NavLink>
          

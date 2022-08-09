@@ -36,6 +36,37 @@
   margin-bottom: 30px;
 }
 
+.back-button {
+
+  min-width: 150px;
+  margin-bottom: 30px;
+  padding: 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(202, 61, 54);
+  border: none;
+  color: rgb(15, 66, 54);
+  transition: all 0.5s;
+}
+
+.inputWithButton {
+  position: relative;
+  height: 100px;
+  width : 200px;
+}
+.inputWithButton input{
+  width: 70%;
+  height: 25px;
+  padding-right: 60px;
+}
+
+.inputWithButton button {
+position: absolute;
+right: 0;
+top : 5px;
+}
+
 .fetch-button {
   min-width: 150px;
   margin-bottom: 30px;
@@ -72,11 +103,12 @@
 
 .animecomp {
   background: #fff;
-  position: relative;
+  position: absolute;
+  left: 0;
   border-radius: 5px;
   padding: 20px;
   margin: 10px;
-  width: 47%;
+  width: 100%;
   color: #333;
   flex-basis: width;
   background-color: rgb(165, 230, 230);
@@ -96,4 +128,134 @@
 
 .details {
   text-align: left;
+}
+
+search {
+  width: 95%;
+  border: 2px solid #000;
+  border-radius: 2em;
+  overflow: hidden;
+  font-size: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.search:focus-within {
+  box-shadow: 2px 2px 5px #000;
+}
+.search-wrapper {
+  margin: 48px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 375px) {
+  .search-input {
+      width: 100%;
+  }
+  .search-wrapper {
+      justify-content: start;
+      flex-wrap: wrap;
+  }
+}
+
+
+.search__button,
+.search__input {
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+
+.search__input {
+  padding: 1em;
+  width: 85%;
+}
+
+.search__button {
+  width: 15%;
+  font-size: 1.5rem;
+  padding-right: 0.5em;
+  color: gray;
+  display: grid;
+  place-content: center;
+}
+
+@media (min-width: 576px) {
+  .search {
+    font-size: 1.5rem;
+  }
+
+  .search__button {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .search {
+    width: 75%;
+    font-size: 2rem;
+  }
+
+  .search__button {
+    padding-right: 0.5em;
+    font-size: 3rem;
+  }
+}
+.card-grid {
+  margin: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 48px;
+}
+.card {
+  background-color: var(--bg-offset);
+  padding: 0px;
+  box-shadow: 0px 2px 4px var(--border);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+      transform: scale(1.1);
+
+      .card-content {
+          h2 {
+              display: block;
+              -webkit-line-clamp: none;
+              -webkit-box-orient: none;
+              overflow: visible;
+          }
+      }
+  }
+}
+.card-image {
+  max-height: 150px;
+
+  img {
+      min-height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+  }
+}
+.card-content {
+  padding: 32px 15px;
+
+  h2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+  }
+}
+.card-list {
+  margin-top: 16px;
+
+  li {
+      color: var(--text);
+      margin-top: 8px;
+
+      span {
+          color: var(--gray);
+      }
+  }
 }

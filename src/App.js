@@ -4,6 +4,7 @@ import React from 'react';
 import { useState, ReactDOM, Router, Routes, Route} from 'react-router-dom';
 import Navbar from "./components/Navbar.jsx";
 import Animes from "./components/Animes.js";
+import SearchBar from './components/Searchbar';
 // import ReactDOM from 'react';
 
 function App(){
